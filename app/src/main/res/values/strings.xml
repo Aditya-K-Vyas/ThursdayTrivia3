@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">RestaurantApp</string>
+    <string name="imag_name1">Lorem</string>
+    <string name="imag_name2">Chariot</string>
+    <string name="imag_name3">Ipsum</string>
+    <string name="imag_name4">Loki</string>
+    <string name="imag_name5">Polo</string>
+    <string name="imag_name6">Imit</string>
+    <string name="imag_name7">Paneer Plaza</string>
+    <string name="imag_name8">Dolors</string>
+
+
+</resources>
