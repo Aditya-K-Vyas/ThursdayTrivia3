@@ -47,15 +47,9 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
-}
-
-
-@Composable
 fun RestaurantApp() {
     RestaurantAppTheme {
-//            RestaurantList(restaurantList = Datasource().loadRestaurants()
+
         MyScreen()
     }
 }
@@ -96,13 +90,12 @@ fun SearchBar(modifier: Modifier = Modifier, hint: String = "") {
     Box(modifier = Modifier) {
 
         Row(verticalAlignment = Alignment.CenterVertically) {
-//            Spacer(modifier = Modifier.width(32.dp))
-//            Icon(imageVector = Icons.Default.Search, contentDescription = null)
+
             Box(
                 contentAlignment = Alignment.CenterStart,
                 modifier = Modifier.padding(start = 8.dp)
             ) {
-//                Icon(imageVector = Icons.Default.Search, contentDescription = null)
+
                 BasicTextField(
                     value = text,
                     onValueChange = { text = it },
@@ -131,28 +124,11 @@ fun SearchBar(modifier: Modifier = Modifier, hint: String = "") {
             }
 
         }
-//        BasicTextField(
-//            value = text,
-//            onValueChange = { text = it },
-//            maxLines = 1,
-//            singleLine = true,
-//            textStyle = TextStyle(color = Color.Black),
-//            modifier = Modifier
-//                .fillMaxWidth()
-//                .shadow(5.dp, CircleShape)
-//                .background(
-//                    Color.White,
-//                    CircleShape
-//                )
-//                .padding(20.dp)
-//
-//        )
-//        Text(text = "", color = Color.LightGray, modifier = Modifier.padding(20.dp))
 
 
     }
 
-//    TextField(value = " Search", onValueChange ={} )
+
 }
 
 @Composable
@@ -171,12 +147,7 @@ fun RestaurantCard(restaurant: Restaurant, modifier: Modifier = Modifier) {
                     .height(194.dp),
                 contentScale = ContentScale.Crop
             )
-//            Text(
-//                text = stringResource(id = restaurant.stringResourceId),
-//                modifier = Modifier.padding(16.dp),
-//                style = MaterialTheme.typography.h6
-//
-//            )
+
             Row(
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.Center
@@ -189,10 +160,10 @@ fun RestaurantCard(restaurant: Restaurant, modifier: Modifier = Modifier) {
                         style = MaterialTheme.typography.h6,
                         fontWeight = FontWeight.ExtraBold
                     )
-//                    RatingDisplay()
+
                     Text(
                         text = "Tea, Beverages , Shakes",
-//                        modifier = Modifier.padding(8.dp),
+
                         fontSize = 15.sp
                     )
                 }
@@ -250,7 +221,7 @@ fun RatingDisplayPreview() {
 @Composable
 fun DefaultPreview() {
     RestaurantAppTheme {
-//        Greeting("Android")
+
         RestaurantApp()
     }
 }
