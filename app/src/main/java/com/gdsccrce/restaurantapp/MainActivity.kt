@@ -49,7 +49,6 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun RestaurantApp() {
     RestaurantAppTheme {
-
         MyScreen()
     }
 }
@@ -63,7 +62,6 @@ fun MyScreen() {
         Spacer(modifier = Modifier.height(6.dp))
         RestaurantList(restaurantList = Datasource().loadRestaurants())
     }
-
 }
 
 @Composable
@@ -77,7 +75,6 @@ fun RestaurantList(modifier: Modifier = Modifier, restaurantList: List<Restauran
                 )
             )
         }
-
     }
 }
 
@@ -86,9 +83,7 @@ fun SearchBar(modifier: Modifier = Modifier, hint: String = "") {
     var text by remember {
         mutableStateOf("          Restaurant name or a dish ")
     }
-
     Box(modifier = Modifier) {
-
         Row(verticalAlignment = Alignment.CenterVertically) {
 
             Box(
@@ -110,7 +105,6 @@ fun SearchBar(modifier: Modifier = Modifier, hint: String = "") {
                             CircleShape
                         )
                         .padding(20.dp)
-
                 )
                 Icon(
                     imageVector = Icons.Default.Search,
@@ -119,16 +113,9 @@ fun SearchBar(modifier: Modifier = Modifier, hint: String = "") {
                         16.dp
                     )
                 )
-
-
             }
-
         }
-
-
     }
-
-
 }
 
 @Composable
@@ -184,7 +171,6 @@ fun RestaurantCard(restaurant: Restaurant, modifier: Modifier = Modifier) {
                             .align(Alignment.End)
                     )
                 }
-
             }
         }
     }
@@ -192,14 +178,13 @@ fun RestaurantCard(restaurant: Restaurant, modifier: Modifier = Modifier) {
 
 @Composable
 fun RatingDisplay(modifier: Modifier = Modifier) {
-    Surface(color = colorResource(id = R.color.rating_green), shape = RoundedCornerShape(24.dp)) {
+    Surface(color = colorResource(id = R.color.rating_green), shape = RoundedCornerShape(8.dp)) {
         Row(modifier = Modifier.padding(8.dp), verticalAlignment = Alignment.CenterVertically) {
             Text(text = "4.2", color = Color.White, fontWeight = FontWeight.Bold)
             Icon(
                 imageVector = Icons.Default.Star,
                 contentDescription = "ratings",
                 tint = Color.Yellow,
-
                 )
         }
     }
@@ -221,7 +206,6 @@ fun RatingDisplayPreview() {
 @Composable
 fun DefaultPreview() {
     RestaurantAppTheme {
-
         RestaurantApp()
     }
 }
